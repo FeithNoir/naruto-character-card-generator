@@ -79,6 +79,15 @@ document.addEventListener("DOMContentLoaded", function () {
     barFill.classList.add("bar-fill");
     barFill.style.width = `${value}%`;
 
+    // Determina la clase de color basada en el valor
+    if (value <= 33) {
+      barFill.classList.add("low");
+    } else if (value <= 66) {
+      barFill.classList.add("medium");
+    } else {
+      barFill.classList.add("high");
+    }
+
     bar.appendChild(barFill);
     container.appendChild(labelElement);
     container.appendChild(bar);
@@ -88,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function getRandomVillage() {
     const villages = [
-      "Konoha",
+      "Konohagakure",
       "Sunagakure",
       "Kirigakure",
       "Iwagakure",
@@ -98,17 +107,22 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function getRandomRank() {
-    const ranks = ["Genin", "Chunin", "Jonin", "Anbu", "Sannin"];
+    const ranks = ["Genin", "Chunin", "Jonin", "Anbu", "Sannin", "Kage"];
     return ranks[Math.floor(Math.random() * ranks.length)];
   }
 
   function getRandomAffiliation() {
     const affiliations = [
-      "Anbu",
-      "Anbu Raiz",
+      "Raiz",
       "Akatsuki",
       "Ninja Desertor",
-      "Independiente",
+      "Instructor",
+      "Guardia",
+      "Patrulla",
+      "Reconocimiento",
+      "Rastreador",
+      "Cazador",
+      "Mercenario",
     ];
     return affiliations[Math.floor(Math.random() * affiliations.length)];
   }
