@@ -24,6 +24,7 @@ Additionally, the application allows you to download the generated card in PNG f
 - **User-Friendly Interface**: The interface is simple and easy to use.
 - **Card Download**: Generated cards can be downloaded as PNG images.
 - **Styling with Tailwind CSS**: The project is styled with Tailwind CSS for a modern and responsive design.
+- **Header and Footer**: Includes a clear header with the project name and a footer with developer credits and a link to their GitHub profile.
 
 ## Screenshot
 
@@ -54,6 +55,22 @@ Here are some suggestions to expand the project:
 *   **Character Battles**: Create a simple battle system where two generated characters can fight against each other based on their stats.
 *   **Team Generator**: Add a feature to generate a team of 3-4 ninjas with balanced skills.
 *   **Jutsu Generator**: Add a section to the card with a list of random jutsus based on the character's chakra nature.
+
+## Progress Checklist
+
+- [x] ✅ More Villages, Ranks, and Affiliations
+- [x] ✅ Jutsu Generator
+- [x] ✅ Card Customization
+- [x] ✅ Custom Stats
+- [x] ✅ Image Upload
+- [x] ✅ Save and Load Characters
+- [x] ✅ Character Gallery
+- [x] ✅ Team Generator
+- [x] ✅ Character Battles
+- [x] ✅ New UI: Start Screen and Sidebar
+- [x] ✅ Experience, Level, and Jutsu Ranks
+- [x] ✅ Dynamic Stats, Author, and Global Save
+- [x] ✅ Header and Footer
 
 ## Credits
 
