@@ -15,22 +15,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function generateCharacterCard(name) {
     const card = document.createElement("div");
-    card.classList.add("character-card");
+    card.classList.add( "w-80", "mx-auto", "my-5", "p-5", "bg-white", "border", "border-gray-300", "rounded-lg", "shadow-lg", "relative" );
 
     const title = document.createElement("h2");
     title.textContent = name;
+    title.classList.add("text-2xl", "font-bold", "text-gray-800", "mb-4");
 
     const village = document.createElement("p");
     village.innerHTML = `<strong>Aldea:</strong> ${getRandomVillage()}`;
+    village.classList.add("my-1", "text-gray-600");
 
     const rank = document.createElement("p");
     rank.innerHTML = `<strong>Rango Ninja:</strong> ${getRandomRank()}`;
+    rank.classList.add("my-1", "text-gray-600");
 
     const affiliation = document.createElement("p");
     affiliation.innerHTML = `<strong>Afiliación:</strong> ${getRandomAffiliation()}`;
+    affiliation.classList.add("my-1", "text-gray-600");
 
     const chakraNature = document.createElement("p");
     chakraNature.innerHTML = `<strong>Naturaleza de Chakra:</strong> ${getRandomChakraNature()}`;
+    chakraNature.classList.add("my-1", "text-gray-600");
 
     const taijutsuBar = createProgressBar("Taijutsu", getRandomStat());
     const ninjutsuBar = createProgressBar("Ninjutsu", getRandomStat());
@@ -56,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
     card.appendChild(chakraControlBar);
 
     const downloadButton = document.createElement("button");
-    downloadButton.classList.add("download-button");
+    downloadButton.classList.add( "absolute", "top-2", "right-2", "py-1", "px-2", "text-white", "border-none", "rounded-md", "cursor-pointer", "transition-colors", "duration-300", "ease-in-out");
     downloadButton.textContent = "Descargar";
     downloadButton.addEventListener("click", () => downloadCard(card));
     card.appendChild(downloadButton);
@@ -66,26 +71,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function createProgressBar(label, value) {
     const container = document.createElement("div");
-    container.classList.add("bar-container");
+    container.classList.add("flex", "items-center", "my-2");
 
     const labelElement = document.createElement("span");
-    labelElement.classList.add("bar-label");
+    labelElement.classList.add("w-40");
     labelElement.textContent = label;
 
     const bar = document.createElement("div");
-    bar.classList.add("bar");
+    bar.classList.add( "flex-grow", "h-4", "bg-gray-300", "rounded-md", "overflow-hidden");
 
     const barFill = document.createElement("div");
-    barFill.classList.add("bar-fill");
+    barFill.classList.add("h-full");
     barFill.style.width = `${value}%`;
 
-    // Determina la clase de color basada en el valor
+    // Determina el color basada en el valor
     if (value <= 33) {
-      barFill.classList.add("low");
+      barFill.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--low-skill-color');
     } else if (value <= 66) {
-      barFill.classList.add("medium");
+      barFill.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--medium-skill-color');
     } else {
-      barFill.classList.add("high");
+      barFill.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--high-skill-color');
     }
 
     bar.appendChild(barFill);
@@ -102,12 +107,17 @@ document.addEventListener("DOMContentLoaded", function () {
       "Kirigakure",
       "Iwagakure",
       "Kumogakure",
+      "Amegakure",
+      "Otogakure",
+      "Hoshigakure",
+      "Takigakure",
+      "Yugakure",
     ];
     return villages[Math.floor(Math.random() * villages.length)];
   }
 
   function getRandomRank() {
-    const ranks = ["Genin", "Chunin", "Jonin", "Anbu", "Sannin", "Kage"];
+    const ranks = ["Genin", "Chunin", "Jonin", "Anbu", "Sannin", "Kage", "Espadachín de la niebla", "Ninja Médico"];
     return ranks[Math.floor(Math.random() * ranks.length)];
   }
 
@@ -123,6 +133,8 @@ document.addEventListener("DOMContentLoaded", function () {
       "Rastreador",
       "Cazador",
       "Mercenario",
+      "Equipo de Sellado",
+      "Fuerzas Aliadas Shinobi",
     ];
     return affiliations[Math.floor(Math.random() * affiliations.length)];
   }
@@ -138,6 +150,10 @@ document.addEventListener("DOMContentLoaded", function () {
       "Hielo",
       "Lava",
       "Hierro",
+      "Polvo",
+      "Vapor",
+      "Cristal",
+      "Oscuridad",
     ];
     return getRandomArrayElements(
       natures,

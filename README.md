@@ -1,65 +1,86 @@
-# Generador de Tarjetas de Personajes Naruto
+# Naruto Character Card Generator
 
-## Descripción
+## Description
 
-Esta aplicación web permite generar "tarjetas de personajes" como si fueran ninjas dentro del universo de Naruto. Los usuarios pueden ingresar el nombre de un personaje en un campo de texto y, al hacer clic en un botón, se generará aleatoriamente una tarjeta con información detallada sobre el personaje, incluyendo:
+This web application allows you to generate "character cards" as if they were ninjas from the Naruto universe. Users can enter a character's name in a text field, and by clicking a button, a card with detailed information about the character will be randomly generated, including:
 
-- **Nombre**: El nombre ingresado por el usuario.
-- **Aldea**: La aldea a la que pertenece el personaje.
-- **Rango Ninja**: El rango ninja del personaje (Genin, Chunin, Jonin, etc.).
-- **Afiliación**: Si pertenece a un grupo específico como Anbu, Anbu Raiz, Akatsuki, Ninja Desertor, etc.
-- **Naturaleza de Chakra**: Una o dos naturalezas de chakra aleatorias.
-- **Habilidades**:
+- **Name**: The name entered by the user.
+- **Village**: The village the character belongs to.
+- **Ninja Rank**: The character's ninja rank (Genin, Chunin, Jonin, etc.).
+- **Affiliation**: Whether they belong to a specific group like Anbu, Root, Akatsuki, Rogue Ninja, etc.
+- **Chakra Nature**: One or two random chakra natures.
+- **Skills**:
   - Taijutsu
   - Ninjutsu
   - Genjutsu
-  - Cantidad de Chakra
-  - Manejo del Chakra
+  - Chakra Amount
+  - Chakra Control
 
-Además, la aplicación permite descargar la tarjeta generada en formato PNG.
+Additionally, the application allows you to download the generated card in PNG format.
 
-## Características
+## Features
 
-- **Generación Aleatoria**: Los detalles del personaje se generan aleatoriamente cada vez que se crea una nueva tarjeta.
-- **Interfaz Amigable**: La interfaz es simple y fácil de usar.
-- **Descarga de Tarjetas**: Las tarjetas generadas pueden descargarse como imágenes PNG.
+- **Random Generation**: Character details are randomly generated each time a new card is created.
+- **User-Friendly Interface**: The interface is simple and easy to use.
+- **Card Download**: Generated cards can be downloaded as PNG images.
+- **Styling with Tailwind CSS**: The project is styled with Tailwind CSS for a modern and responsive design.
 
-## Captura de Pantalla
+## Screenshot
 
-![Captura de Pantalla](captura_de_pantalla.png) <!-- Reemplaza esto con una captura real si tienes una -->
+![Screenshot](screenshot.png) <!-- Replace this with an actual screenshot if you have one -->
 
-## Uso
+## Usage
 
-1. **Ingresar el Nombre del Personaje**: Escribe el nombre del personaje en el campo de texto.
-2. **Crear Personaje**: Haz clic en el botón "Crear Personaje".
-3. **Ver Tarjeta**: La tarjeta del personaje se generará automáticamente y se mostrará en la página.
-4. **Descargar Tarjeta**: Haz clic en el botón "Descargar" en la tarjeta para guardarla como una imagen PNG.
+1. **Enter Character Name**: Type the character's name in the text field.
+2. **Create Character**: Click the "Create Character" button.
+3. **View Card**: The character card will be automatically generated and displayed on the page.
+4. **Download Card**: Click the "Download" button on the card to save it as a PNG image.
 
-## Créditos
+## Future Improvements
 
-- **Autor**: [FeithNoir](https://github.com/FeithNoir)
+Here are some suggestions to expand the project:
+
+### Expand Existing Features
+
+*   **More Villages, Ranks, and Affiliations**: Add more options to the random generators to increase variety.
+*   **Custom Stats**: Allow users to manually set the character's stats instead of generating them randomly.
+*   **Image Upload**: Allow users to upload an image for their character to be displayed on the card.
+*   **Card Customization**: Add options to change the card's color scheme, font, or layout.
+
+### Add New Functionalities
+
+*   **Character Gallery**: Create a gallery to display all the generated characters.
+*   **Save and Load Characters**: Implement a feature to save characters to local storage and load them later.
+*   **Character Battles**: Create a simple battle system where two generated characters can fight against each other based on their stats.
+*   **Team Generator**: Add a feature to generate a team of 3-4 ninjas with balanced skills.
+*   **Jutsu Generator**: Add a section to the card with a list of random jutsus based on the character's chakra nature.
+
+## Credits
+
+- **Author**: [FeithNoir](https://github.com/FeithNoir)
 - **GitHub**: [https://github.com/FeithNoir](https://github.com/FeithNoir)
 
-## Instalación
+## Installation
 
-1. Clona el repositorio:
+1. Clone the repository:
    ```sh
    git clone https://github.com/FeithNoir/naruto-character-card-generator.git
-2. Abre el proyecto en tu editor de código preferido.
-3. Usa un servidor local (por ejemplo, Live Server en VS Code) para ver la aplicación en tu navegador.
+   ```
+2. Open the project in your preferred code editor.
+3. Use a local server (e.g., Live Server in VS Code) to view the application in your browser.
 
-## Contribución
+## Contribution
 
-Si deseas contribuir a este proyecto, sigue estos pasos:
+If you want to contribute to this project, follow these steps:
 
-1. Haz un fork del repositorio.
-2. Crea una rama para tus cambios (git checkout -b feature/nueva-funcionalidad).
-3. Realiza tus cambios y haz commit (git commit -am 'Añade nueva funcionalidad').
-4. Empuja tus cambios a la rama (git push origin feature/nueva-funcionalidad).
-5. Abre un Pull Request.
+1. Fork the repository.
+2. Create a branch for your changes (`git checkout -b feature/new-feature`).
+3. Make your changes and commit them (`git commit -am 'Add new feature'`).
+4. Push your changes to the branch (`git push origin feature/new-feature`).
+5. Open a Pull Request.
 
-## Contribución
-     
-Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE  para más detalles.
+## License
 
-Espero que disfrutes usando esta aplicación tanto como yo disfruté creándola. ¡Cualquier feedback es bienvenido!
+This project is under the MIT License. See the LICENSE file for more details.
+
+I hope you enjoy using this application as much as I enjoyed creating it. Any feedback is welcome!
